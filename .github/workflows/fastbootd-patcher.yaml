@@ -18,6 +18,7 @@ jobs:
     - name: Download Recovery File
       run: |
         wget https://files.catbox.moe/88zaz1.img -0 recovery.img
+        
     - name: Patch vbmeta
       run: |
         ./patch-vbmeta.sh
