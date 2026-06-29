@@ -11,10 +11,13 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
-    - name: Install deps
+        - name: Install deps
       run: |
         sudo apt install -y lz4 tar openssl python3
 
+    - name: Download Recovery File
+      run: |
+        wget https://files.catbox.moe/88zaz1.img -0 recovery.img
     - name: Patch vbmeta
       run: |
         ./patch-vbmeta.sh
